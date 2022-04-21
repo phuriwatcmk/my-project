@@ -15,7 +15,7 @@ export default function HeroSection() {
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            Welcome to Insku admin
+            Welcome to Inskru admin
           </h1>
           <p
             className="md:text-2xl lg:text-3xl font-bold tracking-wider mt-1 lg:mt-6"
@@ -27,7 +27,14 @@ export default function HeroSection() {
             The Happiness Community for Seniors
           </p>
           <div className="flex tracking-wide w-full h-full z-10 mt-10 flex justify-center items-center">
-          <img src={djaadmin} alt="homepic" />
+            <img
+              className="text-5xl md:text-6xl lg:text-8xl font-bold tracking-wide"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              src={djaadmin}
+              alt="homepic"
+            />
           </div>
         </div>
       </div>
