@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../UI/Button/Button";
-import { Table } from "@mantine/core";
-import DialogCard from "../UI/Card/DaialogCard";
+// import Button from "../UI/Button/Button";
+import { Table, Text, Group, Button, TextInput } from "@mantine/core";
 
+import DialogCard from "../UI/Card/DaialogCard";
 export default function AccountnManage() {
   const elements = [
     { position: 6, mass: 12.011, symbol: "C", name: "Carbon" },
@@ -32,7 +32,33 @@ export default function AccountnManage() {
         >
           + เพิ่มบัญชีผู้ดูแลระบบ
         </Button> */}
-        <DialogCard></DialogCard>
+        <DialogCard
+          buttonTitle="+ เพิ่มบัญชีผู้ดูแลระบบ"
+          modalTitile="เพิ่มบัญชีผู้ดูแลระบบ"
+        >
+          <form>
+            <Group position="right" mt="xl">
+              <Button
+                classNames={{
+                  root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
+                  label: "",
+                }}
+                type="button"
+              >
+                ยกเลิก
+              </Button>
+              <Button
+                classNames={{
+                  root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
+                  label: "",
+                }}
+                type="button"
+              >
+                ยืนยัน
+              </Button>
+            </Group>
+          </form>
+        </DialogCard>
       </div>
       <div className="mt-8 ">
         <Table striped highlightOnHover>
