@@ -1,11 +1,9 @@
 import React from "react";
 import { Table } from "@mantine/core";
 
-import DialogCard from "../UI/Card/DaialogCard";
-import AddCuponForm from "./CuponForm/AddCuponForm";
-import DelCuponForm from "./CuponForm/DelCuponForm";
+import DialogCard from "../../UI/Card/DaialogCard";
 
-export default function CuponSetting() {
+export default function AllLMsg() {
   const elements = [
     { position: 6, mass: 12.011, symbol: "C", name: "Carbon" },
     { position: 7, mass: 14.007, symbol: "N", name: "Nitrogen" },
@@ -23,22 +21,33 @@ export default function CuponSetting() {
   ));
   return (
     <div>
-      <div className="text-2xl md:text-xl lg:text-4xl font-bold tracking-wide">
-        ตั้งค่าคูปอง
+      <div className="mt-16 text-xl md:text-xl lg:text-2xl tracking-wide">
+        Message ทั้งหมด
       </div>
       <div className="mt-8 ">
         <DialogCard
-          buttonTitle="+ เพิ่มคูปอง"
-          modalTitile="เพิ่มคูปอง"
-        >
-          <AddCuponForm></AddCuponForm>
-        </DialogCard>
+          buttonTitle="+ เพิ่มข้อความ"
+          modalTitile="เพิ่มข้อความ"
+        ></DialogCard>
+      </div>
+      <div className="mt-8 ">
+        <Table striped highlightOnHover>
+          <thead>
+            <tr>
+              <th>Element position</th>
+              <th>Element name</th>
+              <th>Symbol</th>
+              <th>Atomic mass</th>
+            </tr>
+          </thead>
+          <tbody>{rows}</tbody>
+        </Table>
+      </div>
+      <div className="mt-8 ">
         <DialogCard
-          buttonTitle="ลบคูปอง"
-          modalTitile="ลบคูปอง"
-        >
-          <DelCuponForm></DelCuponForm>
-        </DialogCard>
+          buttonTitle="+ เพิ่มรูปภาพ"
+          modalTitile="เพิ่มรูปภาพ"
+        ></DialogCard>
       </div>
       <div className="mt-8 ">
         <Table striped highlightOnHover>

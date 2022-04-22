@@ -5,6 +5,7 @@ export default function DialogCard({
   modalTitile,
   buttonTitle,
   children,
+  buttonIcon,
   buttonType,
   buttonType2,
 }) {
@@ -15,9 +16,9 @@ export default function DialogCard({
       <Modal
         classNames={{
           title:
-            "text-base font-semibold text-gray-900 lg:text-xl dark:text-white",
+            "text-base font-semibold text-black-900 lg:text-xl dark:text-black",
           header:
-            "relative flex justify-center content-center text-center dark:border-gray-600",
+            "relative flex justify-center content-center text-center text-black dark:border-gray-600",
           close: "absolute inset-y-0 right-0 mt-1",
         }}
         closeButtonLabel="Close authentication modal"
@@ -28,6 +29,27 @@ export default function DialogCard({
       >
         {/* Modal content */}
         {children}
+
+        <Group position="right" mt="xl">
+          <Button
+            classNames={{
+              root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
+              label: "",
+            }}
+            type="button"
+          >
+            ยกเลิก
+          </Button>
+          <Button
+            classNames={{
+              root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
+              label: "",
+            }}
+            type="button"
+          >
+            ยืนยัน
+          </Button>
+        </Group>
       </Modal>
 
       <Group position="start">
@@ -35,7 +57,14 @@ export default function DialogCard({
           classNames={{
             root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
             label: "",
+            icon: "mr-0",
           }}
+          styles={{
+            leftIcon: {
+              marginRight: 15,
+            },
+          }}
+          leftIcon={buttonIcon}
           onClick={() => setOpened((o) => !o)}
         >
           {buttonTitle}

@@ -1,11 +1,9 @@
 import React from "react";
 import { Table } from "@mantine/core";
 
-import DialogCard from "../UI/Card/DaialogCard";
-import AddCuponForm from "./CuponForm/AddCuponForm";
-import DelCuponForm from "./CuponForm/DelCuponForm";
+import DialogCard from "../../UI/Card/DaialogCard";
 
-export default function CuponSetting() {
+export default function AllLogic() {
   const elements = [
     { position: 6, mass: 12.011, symbol: "C", name: "Carbon" },
     { position: 7, mass: 14.007, symbol: "N", name: "Nitrogen" },
@@ -23,22 +21,14 @@ export default function CuponSetting() {
   ));
   return (
     <div>
-      <div className="text-2xl md:text-xl lg:text-4xl font-bold tracking-wide">
-        ตั้งค่าคูปอง
+      <div className="mt-16 text-xl md:text-xl lg:text-2xl tracking-wide">
+        Logic ทั้งหมด
       </div>
       <div className="mt-8 ">
         <DialogCard
-          buttonTitle="+ เพิ่มคูปอง"
-          modalTitile="เพิ่มคูปอง"
-        >
-          <AddCuponForm></AddCuponForm>
-        </DialogCard>
-        <DialogCard
-          buttonTitle="ลบคูปอง"
-          modalTitile="ลบคูปอง"
-        >
-          <DelCuponForm></DelCuponForm>
-        </DialogCard>
+          buttonTitle="+ เพิ่ม Logic"
+          modalTitile="เพิ่ม Logic"
+        ></DialogCard>
       </div>
       <div className="mt-8 ">
         <Table striped highlightOnHover>

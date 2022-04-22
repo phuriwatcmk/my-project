@@ -1,9 +1,12 @@
 import React from "react";
 import { Group, Button, Table } from "@mantine/core";
-import DialogCard from "../UI/Card/DaialogCard";
+import DialogCard from "../../UI/Card/DaialogCard";
 import SchoolUpload from "./SchoolUpload";
-import Select from "../UI/Selector/Select";
-import DateRange from "../UI/DatePickerRange/DatePickerRange";
+import Select from "../../UI/Selector/Select";
+import DateRange from "../../UI/DatePickerRange/DatePickerRange";
+import Search from "../../UI/Search/Search";
+import DelSchoolForm from "../SchoolManage/SchoolForm/DelSchoolForm";
+import AddSchoolForm from "../SchoolManage/SchoolForm/AddSchoolForm";
 export default function Schoolmanage() {
   const elements = [
     { position: 6, mass: 12.011, symbol: "C", name: "Carbon" },
@@ -28,32 +31,57 @@ export default function Schoolmanage() {
       </div>
       <div className="mt-8 inline-flex">
         <DialogCard
-          buttonTitle="+ เพิ่มบัญชีผู้ดูแลระบบ"
-          modalTitile="เพิ่มบัญชีผู้ดูแลระบบ"
+          buttonTitle="+ เพิ่มกลุ่มโรงเรียน"
+          modalTitile="เพิ่มกลุ่มโรงเรียน"
         >
-          <form>
-            <Group position="right" mt="xl">
-              <Button
-                classNames={{
-                  root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
-                  label: "",
-                }}
-                type="button"
-              >
-                ยกเลิก
-              </Button>
-              <Button
-                classNames={{
-                  root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
-                  label: "",
-                }}
-                type="button"
-              >
-                ยืนยัน
-              </Button>
-            </Group>
-          </form>
+          <AddSchoolForm></AddSchoolForm>
         </DialogCard>
+
+        <DialogCard
+          buttonIcon={
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+              />
+            </svg>
+          }
+          modalTitile="ลบกลุ่มโรงเรียน"
+        >
+          <DelSchoolForm></DelSchoolForm>
+        </DialogCard>
+        
+        <DialogCard
+          buttonIcon={
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+              />
+            </svg>
+          }
+          modalTitile="แก้ไขกลุ่มโรงเรียน"
+        >
+          <AddSchoolForm></AddSchoolForm>
+        </DialogCard>
+
+
         <SchoolUpload></SchoolUpload>
       </div>
       <div className="mt-8">
@@ -76,7 +104,7 @@ export default function Schoolmanage() {
             <Select placeholder="สถานะ" data={[]}></Select>
           </div>
           <div className="basis-1/2">
-            <Select placeholder="กรองไอเดีย" data={[]}></Select>
+            <Search placeholder="ค้นหาผ่านชื่อไอเดีย นามปากกาคนเขียน "></Search>
           </div>
           <div className="basis-1/3"></div>
         </div>

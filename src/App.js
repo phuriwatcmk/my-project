@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import AccountSettingPage from "./pages/AccountSetting";
 import CuponSettingPage from "./pages/CuponSetting";
 import IdeaDataPage from "./pages/IdeaData";
+import LogicMessagePage from "./pages/LogicMessage";
 
 export default function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/accountsetting/" element={<AccountSettingPage />}></Route>
           <Route path="/cuponsetting/" element={<CuponSettingPage />}></Route>
           <Route path="/ideadata/" element={<IdeaDataPage />}></Route>
+          <Route path="/logicmsg/" element={<LogicMessagePage />}></Route>
 
         </Route>
         <Route element={<HomeLayout />}>

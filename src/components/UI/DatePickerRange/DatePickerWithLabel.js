@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { DateRangePicker } from "@mantine/dates";
 
-export default function DateRange({ label, placeholder }) {
+export default function DatePickerWithLabel({ label, placeholder }) {
   const [value, setValue] = useState("");
 
   return (
     <DateRangePicker
       classNames={{
-        root: "flex flex-inline",
+        root: "",
         label: "mr-2 self-center",
         dropdown: "rounded-lg",
         arrow: "w-0 h-0",

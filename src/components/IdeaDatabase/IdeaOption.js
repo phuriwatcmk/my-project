@@ -1,6 +1,7 @@
 import React from "react";
 import Select from "../UI/Selector/Select";
 import DateRange from "../UI/DatePickerRange/DatePickerRange";
+import Search from "../UI/Search/Search";
 
 export default function IdeaOption() {
   return (
@@ -13,18 +14,18 @@ export default function IdeaOption() {
           <Select placeholder="กรองไอเดีย" data={[]}></Select>
         </div>
         <div className="basis-1/4">
-          <DateRange label="" placeholder="เลือกช่วงวันที่"></DateRange>
+          <DateRange label="Created:" placeholder="เลือกช่วงวันที่"></DateRange>
         </div>
         <div className="basis-1/4">
-          <DateRange label="" placeholder="เลือกช่วงวันที่"></DateRange>
+          <DateRange label="Updated:" placeholder="เลือกช่วงวันที่"></DateRange>
         </div>
       </div>
       <div className="flex flex-row justify-center gap-8">
         <div className="basis-1/2">
-          <Select placeholder="เรียงลำดับโดย" data={[]}></Select>
+          <Select placeholder="พิมพ์แท็ก" data={[]}></Select>
         </div>
         <div className="basis-1/2">
-          <Select placeholder="กรองไอเดีย" data={[]}></Select>
+          <Search placeholder="ค้นหาผ่านชื่อไอเดีย นามปากกาคนเขียน "></Search>
         </div>
       </div>
 
