@@ -11,7 +11,7 @@ function Nav(props) {
   return (
     <div className="">
       <div className="mt-6 h-7xl">
-        <div className="max-w-7xl mx-auto px-4 pb-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-0 px-4 pb-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0 mr-10">
@@ -26,9 +26,6 @@ function Nav(props) {
               </div>
               <StatsDropDown />
               <SettingsDropDown />
-              <WorkShopDropDown />
-              <WorkShopDropDown />
-              <WorkShopDropDown />
               <WorkShopDropDown />
             </div>
             {props.children}
