@@ -2,6 +2,7 @@ import React from "react";
 import { Table } from "@mantine/core";
 
 import DialogCard from "../../UI/Card/DaialogCard";
+import AddLogicForm from "./AddLogicForm";
 
 export default function AllLogic() {
   const elements = [
@@ -28,7 +29,10 @@ export default function AllLogic() {
         <DialogCard
           buttonTitle="+ เพิ่ม Logic"
           modalTitile="เพิ่ม Logic"
-        ></DialogCard>
+        >
+          {/* child add logic */}
+          <AddLogicForm></AddLogicForm>
+        </DialogCard>
       </div>
       <div className="mt-8 ">
         <Table striped highlightOnHover>

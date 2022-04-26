@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as Download } from "../../assets/icon/download.svg";
 
 export default function IdeaUpload() {
   return (

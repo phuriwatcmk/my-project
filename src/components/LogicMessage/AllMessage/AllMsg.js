@@ -2,6 +2,8 @@ import React from "react";
 import { Table } from "@mantine/core";
 
 import DialogCard from "../../UI/Card/DaialogCard";
+import AddMsgForm from "./AddMsgForm";
+import UploadPic from "./UploadPic";
 
 export default function AllLMsg() {
   const elements = [
@@ -28,7 +30,10 @@ export default function AllLMsg() {
         <DialogCard
           buttonTitle="+ เพิ่มข้อความ"
           modalTitile="เพิ่มข้อความ"
-        ></DialogCard>
+        >
+          {/* Child */}
+          <AddMsgForm></AddMsgForm>
+        </DialogCard>
       </div>
       <div className="mt-8 ">
         <Table striped highlightOnHover>
@@ -47,7 +52,10 @@ export default function AllLMsg() {
         <DialogCard
           buttonTitle="+ เพิ่มรูปภาพ"
           modalTitile="เพิ่มรูปภาพ"
-        ></DialogCard>
+        >
+          {/* child add message */}
+          <UploadPic></UploadPic>
+        </DialogCard>
       </div>
       <div className="mt-8 ">
         <Table striped highlightOnHover>

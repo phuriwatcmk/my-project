@@ -1,8 +1,9 @@
 import React from "react";
 import { Group, Button, TextInput } from "@mantine/core";
 
+
 import Select from "../../UI/Selector/Select";
-import { DatePicker } from "@mantine/dates";
+import DatePicker from "../../../components/UI/DatePickerRange/DatePicker";
 
 export default function AddCuponForm() {
   return (

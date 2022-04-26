@@ -8,6 +8,7 @@
     "@mantine/core": "^4.1.4",
     "@mantine/dates": "^4.1.4",
     "@mantine/hooks": "^4.1.4",
+    "@tanstack/react-table": "^8.0.0-alpha.47",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.2.1",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24"
