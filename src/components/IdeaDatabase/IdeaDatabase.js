@@ -285,11 +285,6 @@ export default function IdeaDatabase() {
                 {info.value}
               </Button>
             </div>
-            <div className="snap-center">
-              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
-                {info.value}
-              </Button>
-            </div>
 
             <DialogCard buttonIcon={<Add />} modalTitile="แก้ไขกลุ่มโรงเรียน">
               <AddSchoolForm></AddSchoolForm>
@@ -306,16 +301,6 @@ export default function IdeaDatabase() {
           <div className="flex flex-nowrap max-w-xs overflow-x-auto scrollbarTable">
             <div>
               <Button className="mr-1 w-auto h-10 text-xs text-white  bg-red-400 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
-                {info.value}
-              </Button>
-            </div>
-            <div>
-              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-red-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
-                {info.value}
-              </Button>
-            </div>
-            <div>
-              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-red-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
@@ -359,7 +344,7 @@ export default function IdeaDatabase() {
   return (
     <div>
       <div className="text-2xl md:text-xl lg:text-4xl font-bold tracking-wide">
-        idea database
+        Idea database
       </div>
       <IdeaUpload />
       <IdeaOption />

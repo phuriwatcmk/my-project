@@ -1,5 +1,5 @@
 import React from "react";
-import { MultiSelect, Anchor, Breadcrumbs, Button } from "@mantine/core";
+import { Anchor, Breadcrumbs, Button } from "@mantine/core";
 import { ReactComponent as Trash } from "../../assets/icon/trash.svg";
 import HiddenTag from '../UI/HiddenTag/HiddenTag'
 export default function EditIdea() {
@@ -13,7 +13,7 @@ export default function EditIdea() {
     { value: "blitz", label: "Blitz.js" },
   ];
   const items = [
-    { title: "idea database", href: "#" },
+    { title: "idea database", href: "ideadata" },
     { title: "edit-idea", href: "#" },
   ].map((item, index) => (
     <Anchor href={item.href} key={index}>
@@ -71,26 +71,5 @@ export default function EditIdea() {
         </div>
       </div>
     </div>
-  );
-}
-
-function DemoIcon({ value }) {
-  return (
-    <>
-      <div
-        class="mantine-MultiSelect-defaultValue  rounded-full bg-blue-300 text-white text-xs mantine-MultiSelect-value mantine-9z8m8t"
-        value="ng"
-      >
-        <span class="mantine-rsiguj mantine-MultiSelect-label">Angular</span>
-        <button
-          class="mantine-ActionIcon-transparent mantine-ActionIcon-root text-white text-2xl mantine-MultiSelect-defaultValueRemove mantine-1kyus1h"
-          type="button"
-          aria-hidden="true"
-          tabindex="-1"
-        >
-          <Trash />
-        </button>
-      </div>
-    </>
   );
 }

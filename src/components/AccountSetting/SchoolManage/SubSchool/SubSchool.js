@@ -16,7 +16,7 @@ import SubSchoolMember from "./SubSchoolMember";
 
 export default function Schoolmanage() {
   const items = [
-    { title: "จัดการบัญชี Membership", href: "#" },
+    { title: "แพ็คเกจกลุ่มโรงเรียน", href: "schoolmanage" },
     { title: "โรงเรียน A", href: "#" },
   ].map((item, index) => (
     <Anchor href={item.href} key={index}>
@@ -188,7 +188,6 @@ export default function Schoolmanage() {
 
   return (
     <div>
-      {" "}
         <div className="mb-2">
           <Breadcrumbs separator=">">{items}</Breadcrumbs>
         </div>

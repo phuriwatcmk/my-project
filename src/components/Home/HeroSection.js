@@ -1,29 +1,19 @@
 import React from "react";
-import { Anchor, Breadcrumbs, Group, Button, Table } from "@mantine/core";
 
 import djaadmin from "../../assets/images/djaadmin.png";
 
 export default function HeroSection() {
-  const items = [
-    { title: "Idea", href: "/ideadata" },
-    { title: "SubSchool", href: "/accountsetting" },
-    { title: "cuponsetting", href: "/cuponsetting" },
-    { title: "logicmessage", href: "/logicmsg" },
-  ].map((item, index) => (
-    <Anchor href={item.href} key={index}>
-      {item.title}
-    </Anchor>
-  ));
+
   return (
     <section
       id="hero"
-      className="h-96 lg:h-screen w-full pt-16 lg:pt-20 -mt-16 lg:-mt-20"
+      className="lg:h-screen w-full"
       data-aos="fade-in"
     >
       <div className="text-black text-center font-quicksand absolute w-full h-full z-10 flex justify-center items-center lg:items-start lg:pt-32 overflow-hidden">
         <div className="-mt-16 lg:-mt-20">
             <div className="mb-2 mt-8">
-              <Breadcrumbs separator=">">{items}</Breadcrumbs>
+              {/* <Breadcrumbs separator=">">{items}</Breadcrumbs> */}
             </div>
           <div className="flex tracking-wide w-full h-full z-10 mt-10 justify-center items-center">
             <img

@@ -42,6 +42,7 @@ function Value({
           size={22}
           iconSize={14}
           tabIndex={-1}
+          className="text-white"
         />
       </Box>
     </div>
@@ -67,7 +68,6 @@ export default function Demo({MultiSelectProps, hiddenTagData}) {
       valueComponent={Value}
       itemComponent={Item}
       searchable
-      defaultValue={['US', 'FI']}
       placeholder="Pick countries"
       label="Which countries you visited last year?"
       {...MultiSelectProps}

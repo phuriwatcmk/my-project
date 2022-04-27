@@ -1,11 +1,11 @@
 import React from 'react'
 // import AccountSetting from '../components/AccountSetting/AccountManage/MemberManage'
-// import AccountSetting from '../components/AccountSetting/AccountManage/AdminManage'
+import AdminManage from '../components/AccountSetting/AccountManage/AdminManage'
 // import AccountSetting from '../components/AccountSetting/AccountManage/SchoolManage'
-import AccountSetting from '../components/AccountSetting/SchoolManage/SubSchool/SubSchool'
+// import AdminManage from '../components/AccountSetting/SchoolManage/SubSchool/SubSchool'
 
-export default function AccountSettingPage() {
+export default function AdminManagePage() {
   return (
-    <AccountSetting></AccountSetting>
+    <AdminManage></AdminManage>
   )
 }
