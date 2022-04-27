@@ -1,35 +1,25 @@
 import React from "react";
-import { Anchor, Breadcrumbs, Box, Button} from "@mantine/core";
+import { Box, Button } from "@mantine/core";
 import { createTable } from "@tanstack/react-table";
 
 import { ReactComponent as Trash } from "../../../../assets/icon/trash.svg";
 import { ReactComponent as Pencil } from "../../../../assets/icon/pencil.svg";
 
-import Table from "../../../UI/Table/Table";
+import Select from "../../../UI/Selector/Select";
+import Search from "../../../UI/Search/Search";
 import DialogCard from "../../../UI/Card/DaialogCard";
+import Table from "../../../UI/Table/Table";
 import UserIdUI from '../../../UI/User/UserId'
-import SchoolUpload from "../../AccountManage/SchoolUpload";
 import AddSubSchoolForm from "../../SchoolManage/SubSchool/SubSchoolForm/AddSubSchoolForm";
 import DelSubSchoolForm from "../../SchoolManage/SubSchool/SubSchoolForm/DelSubSchoolForm";
-import SubSchoolMember from "./SubSchoolMember";
 
-
-export default function Schoolmanage() {
-  const items = [
-    { title: "จัดการบัญชี Membership", href: "#" },
-    { title: "โรงเรียน A", href: "#" },
-  ].map((item, index) => (
-    <Anchor href={item.href} key={index}>
-      {item.title}
-    </Anchor>
-  ));
-
+export default function SubSchoolMember() {
   const elements = [
     {
       id: 1,
       startDate: "01/01/22",
       endDate: "01/01/22",
-      position: "ผอ./ฝ่ายวิชาการ",
+      position: "School",
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
@@ -43,7 +33,7 @@ export default function Schoolmanage() {
       id: 2,
       startDate: "01/01/22",
       endDate: "01/01/22",
-      position: "ผอ./ฝ่ายวิชาการ",
+      position: "School",
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
@@ -57,7 +47,7 @@ export default function Schoolmanage() {
       id: 3,
       startDate: "01/01/22",
       endDate: "01/01/22",
-      position: "ผอ./ฝ่ายวิชาการ",
+      position: "School",
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
@@ -71,7 +61,7 @@ export default function Schoolmanage() {
       id: 4,
       startDate: "01/01/22",
       endDate: "01/01/22",
-      position: "ผอ./ฝ่ายวิชาการ",
+      position: "School",
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
@@ -174,52 +164,53 @@ export default function Schoolmanage() {
       id: "id",
       cell: (info) => (
         <div className="flex justify-end space-x-2">
-          <DialogCard buttonIcon={<Pencil />} modalTitile="แก้ไขตำแหน่ง">
+          <DialogCard buttonIcon={<Pencil />} modalTitile="เพิ่ม Membership">
             <AddSubSchoolForm></AddSubSchoolForm>
           </DialogCard>
           <DialogCard buttonIcon={<Trash />} modalTitile="ลบ Membership">
-          <DelSubSchoolForm></DelSubSchoolForm>
+            <DelSubSchoolForm></DelSubSchoolForm>
           </DialogCard>
         </div>
       ),
       header: () => <span></span>,
     }),
   ]);
-
   return (
     <div>
       {" "}
-        <div className="mb-2">
-          <Breadcrumbs separator=">">{items}</Breadcrumbs>
-        </div>
-      <div className="text-2xl md:text-xl lg:text-4xl font-bold tracking-wide">
-        โรงเรียน A
+      <div className=" mt-8 text-2xl md:text-xl lg:text-4xl font-bold tracking-wide">
+        School Membership
       </div>
-      <p className="mt-4 max-w-2xl text-sm text-gray-500">
-        สังกัด : xxxxx จังหวัด : xxxxx คูปอง : xxxxxxxxxxxxxxx วันเริ่ม -
-        วันหมดอายุ : 01/01/01 - 01/01/01
-      </p>
-      <div className="mt-8 inline-flex">
-        <DialogCard
-          buttonTitle="+ เพิ่มบัญชีในกลุ่มนี้"
-          modalTitile="เพิ่มบัญชีในกลุ่มนี้"
-        >
-          <AddSubSchoolForm></AddSubSchoolForm>
-        </DialogCard>
-        <div className="mx-8">
-          <DialogCard buttonTitle="ดูแดชบอร์ด" modalTitile="ดูแดชบอร์ด">
-            <form></form>
-          </DialogCard>
+      <div className="mt-8">
+        <div className="flex flex-row justify-start gap-8">
+          <div className="basis-1/6">
+            <Select placeholder="อาชีพ" data={[]}></Select>
+          </div>
+          <div className="basis-1/6">
+            <Select placeholder="โรงเรียน" data={[]}></Select>
+          </div>
+          <div className="basis-1/6">
+            <Select placeholder="จังหวัด" data={[]}></Select>
+          </div>
+          <div className="basis-1/3"></div>
         </div>
-        <SchoolUpload></SchoolUpload>
+        <div className="mt-4 flex flex-row justify-center gap-8">
+          <div className="basis-1/3">
+            <Select
+              placeholder="พิมพ์แท็ก ระดับชั้น หรือ วิชาที่สอน"
+              data={[]}
+            ></Select>
+          </div>
+          <div className="basis-1/2">
+            <Search placeholder="พิมพ์ชื่อ นามปากกา หรือ userid  "></Search>
+          </div>
+          <div className="basis-1/6"></div>
+        </div>
       </div>
-      <div className="mt-8 text-2xl">ผอ. / ฝ่ายวิชาการ</div>
-      <div className="mt-2 mb-4 text-sm">จำนวน {elements.length} account</div>
-      {/* Table */}
-      <Box className="mt-8">
+      <div className="mt-8 mb-4 text-md">จำนวน {elements.length} account</div>
+      <Box>
         <Table elements={elements} defaultColumns={defaultColumns} />
       </Box>
-      <SubSchoolMember></SubSchoolMember>
     </div>
   );
 }

@@ -1,45 +1,46 @@
 import React from "react";
+import { Box, Button } from "@mantine/core";
 import { createTable } from "@tanstack/react-table";
 
 import { ReactComponent as Trash } from "../../../assets/icon/trash.svg";
 import { ReactComponent as Pencil } from "../../../assets/icon/pencil.svg";
 
-import { Box} from "@mantine/core";
 import DialogCard from "../../UI/Card/DaialogCard";
-import AddMsgForm from "./AddMsgForm";
+import AddLogicForm from "../AllLogic/AddLogicForm";
+import DelLogicForm from "../AllLogic/DelLogicForm";
 import Table from "../../UI/Table/Table";
-import DelMsgForm from "./DelMsg";
+import UploadPic from "./UploadPic";
 
-export default function AllLMsg() {
+export default function Allpic() {
   const elements = [
     {
       id: 1,
       logicName: "A",
-      linkPaperform: "paperform A",
+      picture: "picture A"
     },
     {
       id: 2,
       logicName: "A",
-      linkPaperform: "paperform A",
+      picture: "picture A"
     },
     {
       id: 3,
       logicName: "A",
-      linkPaperform: "paperform A",
+      picture: "picture A"
     },
     {
       id: 4,
       logicName: "A",
-      linkPaperform: "paperform A",
+      picture: "picture A"
     },
   ];
   const table = createTable().setRowType();
 
   const defaultColumns = table.createColumns([
-    table.createDataColumn((row) => row.linkPaperform, {
-      id: "linkPaperform",
+    table.createDataColumn((row) => row.picture, {
+      id: "picture",
       cell: (info) => info.value,
-      header: () => <span>ข้อความ</span>,
+      header: () => <span>รูปภาพ</span>,
     }),
     table.createDataColumn((row) => row.logicName, {
       id: "logicName",
@@ -50,11 +51,11 @@ export default function AllLMsg() {
       id: "id",
       cell: (info) => (
         <div className="flex justify-end space-x-2">
-          <DialogCard buttonIcon={<Pencil />} modalTitile="แก้ไข Logic">
-            <AddMsgForm value={info.value}></AddMsgForm>
+          <DialogCard buttonIcon={<Pencil />} modalTitile="เพิ่มรูปภาพ">
+            <UploadPic value={info.value}></UploadPic>
           </DialogCard>
-          <DialogCard buttonIcon={<Trash />} modalTitile="ลบ Logic">
-            <DelMsgForm value={info.value}></DelMsgForm>
+          <DialogCard buttonIcon={<Trash />} modalTitile="ลบรูปภาพ">
+            <UploadPic value={info.value}></UploadPic>
           </DialogCard>
         </div>
       ),
@@ -63,16 +64,12 @@ export default function AllLMsg() {
   ]);
   return (
     <div>
-      <div className="mt-16 text-xl md:text-xl lg:text-2xl tracking-wide">
-        Message ทั้งหมด
-      </div>
       <div className="mt-8 ">
-        <DialogCard buttonTitle="+ เพิ่มข้อความ" modalTitile="เพิ่มข้อความ">
-          {/* Child */}
-          <AddMsgForm></AddMsgForm>
+        <DialogCard buttonTitle="+ เพิ่มรูปภาพ" modalTitile="เพิ่มรูปภาพ">
+          {/* child add message */}
+          <UploadPic></UploadPic>
         </DialogCard>
       </div>
-      {/* Table */}
       <Box className="mt-8">
         <Table elements={elements} defaultColumns={defaultColumns} />
       </Box>

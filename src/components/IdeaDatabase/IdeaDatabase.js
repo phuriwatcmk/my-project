@@ -6,10 +6,12 @@ import Table from "../AccountSetting/AccountManage/Table";
 import { createTable } from "@tanstack/react-table";
 
 import { ReactComponent as Pencil } from "../../assets/icon/pencil.svg";
+import { ReactComponent as Add } from "../../assets/icon/add.svg";
 
 import { Button } from "@mantine/core";
 import DialogCard from "../UI/Card/DaialogCard";
 import AddSchoolForm from "../AccountSetting/SchoolManage/SchoolForm/AddSchoolForm";
+import UserNameUI from "../../components/UI/User/UserName";
 
 export default function IdeaDatabase() {
   const elements = [
@@ -17,7 +19,187 @@ export default function IdeaDatabase() {
       id: 1,
       selected: "Growth mindset1",
       ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
+      userTag: "วิทยาศาสตร์",
+      hiddenTagByAdmin: "วิทยาศาสตร์",
+      receivedUser: "123456",
+      created: "01/01/22",
+      updated: "01/01/22",
+    },
+    {
+      selected: "Growth mindset1",
+      ideaName: "ชื่อไอเดียชื่อไอเดีย",
+      writter: "username",
       userTag: "วิทยาศาสตร์",
       hiddenTagByAdmin: "วิทยาศาสตร์",
       receivedUser: "123456",
@@ -57,7 +239,7 @@ export default function IdeaDatabase() {
     {
       selected: "Growth mindset1",
       ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
+      writter: "username",
       userTag: "วิทยาศาสตร์",
       hiddenTagByAdmin: "วิทยาศาสตร์",
       receivedUser: "123456",
@@ -67,187 +249,7 @@ export default function IdeaDatabase() {
     {
       selected: "Growth mindset1",
       ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
-      userTag: "วิทยาศาสตร์",
-      hiddenTagByAdmin: "วิทยาศาสตร์",
-      receivedUser: "123456",
-      created: "01/01/22",
-      updated: "01/01/22",
-    },
-    {
-      selected: "Growth mindset1",
-      ideaName: "ชื่อไอเดียชื่อไอเดีย",
-      writter: "C",
+      writter: "username",
       userTag: "วิทยาศาสตร์",
       hiddenTagByAdmin: "วิทยาศาสตร์",
       receivedUser: "123456",
@@ -255,7 +257,7 @@ export default function IdeaDatabase() {
       updated: "01/01/22",
     },
   ];
-  
+
   const table = createTable().setRowType();
   const defaultColumns = table.createColumns([
     table.createDataColumn((row) => row.selected, {
@@ -266,12 +268,12 @@ export default function IdeaDatabase() {
     table.createDataColumn((row) => row.ideaName, {
       id: "ideaName",
       cell: (info) => info.value,
-      header: () => <span>Ideaname</span>,
+      header: () => <span>ชื่อไอเดีย</span>,
     }),
     table.createDataColumn((row) => row.writter, {
       id: "writter",
-      cell: (info) => info.value,
-      header: () => <span>Writter</span>,
+      cell: (info) => <UserNameUI username={info.value} />,
+      header: () => <span>คนเขียน</span>,
     }),
     table.createDataColumn((row) => row.userTag, {
       id: "userTag",
@@ -279,42 +281,23 @@ export default function IdeaDatabase() {
         <>
           <div className="flex flex-nowrap max-w-xs overflow-x-auto scrollbarTable snap-x scroll-smooth">
             <div className="snap-center">
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
             <div className="snap-center">
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
-            <div className="snap-center">
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
-                {info.value}
-              </Button>
-            </div>
-            <div className="snap-center">
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
-                {info.value}
-              </Button>
-            </div>
-            <div className="snap-center">
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
-                {info.value}
-              </Button>
-            </div>
-            {/* <div>
-              <DialogCard
-                buttonIcon={<Pencil />}
-                modalTitile="แก้ไขกลุ่มโรงเรียน"
-              >
-                <AddSchoolForm></AddSchoolForm>
-              </DialogCard>
-            </div> */}
+
+            <DialogCard buttonIcon={<Add />} modalTitile="แก้ไขกลุ่มโรงเรียน">
+              <AddSchoolForm></AddSchoolForm>
+            </DialogCard>
           </div>
         </>
       ),
-      header: () => <span>UserTag</span>,
+      header: () => <span>User Tag</span>,
     }),
     table.createDataColumn((row) => row.hiddenTagByAdmin, {
       id: "hiddenTagByAdmin",
@@ -322,42 +305,33 @@ export default function IdeaDatabase() {
         <>
           <div className="flex flex-nowrap max-w-xs overflow-x-auto scrollbarTable">
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-red-400 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-red-400 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-red-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-red-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-red-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-red-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
-            <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-red-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
-                {info.value}
-              </Button>
-            </div>
-            {/* <div>
-          <DialogCard
-            buttonIcon={<Pencil />}
-            modalTitile="แก้ไขกลุ่มโรงเรียน"
-          >
-            <AddSchoolForm></AddSchoolForm>
-          </DialogCard>
-        </div> */}
+
+            <DialogCard buttonIcon={<Add />} modalTitile="แก้ไขกลุ่มโรงเรียน">
+              <AddSchoolForm></AddSchoolForm>
+            </DialogCard>
           </div>
         </>
       ),
-      header: () => <span>HiddenTagByadmin</span>,
+      header: () => <span>Hidden Tag by admin</span>,
     }),
     table.createDataColumn((row) => row.receivedUser, {
       id: "receivedUser",
       cell: (info) => info.value,
-      header: () => <span>ReceivedUser</span>,
+      header: () => <span>Received (user)</span>,
     }),
     table.createDataColumn((row) => row.created, {
       id: "created",
@@ -373,14 +347,9 @@ export default function IdeaDatabase() {
       id: "id",
       cell: (info) => (
         <>
-          <div>
-            <DialogCard
-              buttonIcon={<Pencil />}
-              modalTitile="แก้ไขกลุ่มโรงเรียน"
-            >
-              <AddSchoolForm value={info.value}></AddSchoolForm>
-            </DialogCard>
-          </div>
+          <DialogCard buttonIcon={<Pencil />} modalTitile="แก้ไขกลุ่มโรงเรียน">
+            <AddSchoolForm value={info.value}></AddSchoolForm>
+          </DialogCard>
         </>
       ),
       header: () => <span></span>,

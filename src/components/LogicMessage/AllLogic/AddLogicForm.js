@@ -25,8 +25,8 @@ export default function AddLogicForm() {
         label="Hidden Tag"
         placeholder="เลือก Hidden Tag ที่ใช้ผูกกับ Logic นี้"
       />
-      <Text>Condition</Text>
-      <div className="flex flex-row">
+      <Text className="mt-1">Condition</Text>
+      <div className="flex flex-row space-x-2">
         <div class="flex-1">
           <TextInput label="" placeholder="กรอก Key จาก Paperform   " />
         </div>
@@ -47,7 +47,7 @@ export default function AddLogicForm() {
       </div>
       <Button
         classNames={{
-          root: "z-40 mt-1 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
+          root: "z-40 mt-2 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
           label: "",
         }}
         type="button"

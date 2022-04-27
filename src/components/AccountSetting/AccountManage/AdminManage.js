@@ -8,7 +8,7 @@ import { ReactComponent as Pencil } from "../../../assets/icon/pencil.svg";
 import DialogCard from "../../UI/Card/DaialogCard";
 import AddAdminForm from "./AdminUI/FormUI/AddAdminForm";
 import DelAdminForm from "./AdminUI/FormUI/DelAdminForm";
-import Table from "./Table";
+import Table from "../../UI/Table/Table";
 
 export default function AccountnManage() {
   const elements = [

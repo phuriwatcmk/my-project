@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'Pridi';
+}
+
+body {
+  @apply font-pridi
+}
 @layer utilities {
   .scrollbarTable::-webkit-scrollbar {
     width: 6px;

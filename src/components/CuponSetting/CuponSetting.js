@@ -8,7 +8,7 @@ import { ReactComponent as Pencil } from "../../assets/icon/pencil.svg";
 import DialogCard from "../UI/Card/DaialogCard";
 import AddCuponForm from "./CuponForm/AddCuponForm";
 import DelCuponForm from "./CuponForm/DelCuponForm";
-import Table from "../AccountSetting/AccountManage/Table";
+import Table from "../UI/Table/Table";
 export default function CuponSetting() {
 
   const elements = [

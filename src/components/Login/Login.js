@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Card from "../UI/Card/Card";
-import Button from "../UI/Button/Button";
 import { useNavigate } from "react-router-dom";
+
+import { PasswordInput, TextInput, Text, Button, Box } from "@mantine/core";
 
 function Login(props) {
   const [userData, setUserData] = useState({
@@ -19,37 +20,24 @@ function Login(props) {
   const nav = useNavigate();
   return (
     <div className="flex h-screen">
-      <Card>
-        <div className="text-center mb-10">
-          <h3>ลงชื่อเข้าใช้</h3>
-        </div>
-        <form onSubmit={submitHandler}>
-          <label className="text-left">อีเมล</label>
-          <input
-            required
+      <Box className=" w-96 m-auto bg-white rounded-lg border border-primaryBorder shadow-default py-10 px-1">
+        <div className="text-center text-black text-2xl mb-1">
+          ลงชื่อเข้าใช้
+          </div>
+        <form onSubmit={submitHandler} className="px-10 space-y-6">
+          <TextInput
             name="email"
             type="email"
             value={userData.email}
             onChange={userChangeHandler}
-            placeholder="อีเมล"
-            className={
-              "w-full p-2 text-black rounded-md outline outline-black text-sm transition duration-150 ease-in-out mb-4"
-            }
+            placeholder="กรอกอีเมล"
+            label="อีเมล"
+            required
           />
-          <label>รหัสผ่าน</label>
-          <input
-            name="password"
-            type="password"
-            value={userData.password}
-            onChange={userChangeHandler}
-            placeholder="รหัสผ่าน"
-            className={
-              "w-full p-2 text-black rounded-md outline outline-black text-sm transition duration-150 ease-in-out mb-4"
-            }
-          />
+          <PasswordInput placeholder="กรอกรหัสผ่าน" label="รหัสผ่าน" required />
           <div className="flex items-center mt-3 justify-center">
             <Button
-              className="bg-blue-500 rounded-full p-2 inline-flex items-center justify-center"
+              className="bg-blue-500 rounded-full p-2 text-black h-10 w-36"
               type="submit"
               value="login"
             >
@@ -57,7 +45,7 @@ function Login(props) {
             </Button>
           </div>
         </form>
-      </Card>
+      </Box>
     </div>
   );
 }

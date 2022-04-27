@@ -1,6 +1,7 @@
 import React from "react";
 import AllLogic from "./AllLogic/AllLogic";
 import AllLMsg from "./AllMessage/AllMsg";
+import AllPic from "./Allpic/Allpic";
 
 export default function LogicMessage() {
   return (
@@ -10,6 +11,7 @@ export default function LogicMessage() {
       </div>
       <AllLogic></AllLogic>
       <AllLMsg></AllLMsg>
+      <AllPic></AllPic>
     </div>
   );
 }
