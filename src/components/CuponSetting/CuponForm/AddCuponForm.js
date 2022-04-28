@@ -1,6 +1,5 @@
 import React from "react";
-import { Group, Button, TextInput } from "@mantine/core";
-
+import { TextInput } from "@mantine/core";
 
 import Select from "../../UI/Selector/Select";
 import DatePicker from "../../../components/UI/DatePickerRange/DatePicker";

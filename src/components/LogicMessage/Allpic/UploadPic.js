@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Select, TextInput, Button } from "@mantine/core";
+import { Select, Button } from "@mantine/core";
 
 export default function UploadPic() {
   return (

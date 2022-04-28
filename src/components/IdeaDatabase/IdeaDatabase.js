@@ -8,11 +8,8 @@ import Table from "../AccountSetting/AccountManage/Table";
 import { createTable } from "@tanstack/react-table";
 
 import { ReactComponent as Pencil } from "../../assets/icon/pencil.svg";
-import { ReactComponent as Add } from "../../assets/icon/add.svg";
 
 import { Button } from "@mantine/core";
-import DialogCard from "../UI/Card/DaialogCard";
-import AddSchoolForm from "../AccountSetting/SchoolManage/SchoolForm/AddSchoolForm";
 import UserNameUI from "../../components/UI/User/UserName";
 import ReceivedUser from "../IdeaDatabase/ReceivedUser";
 import TagAdd from "./TagAdd";

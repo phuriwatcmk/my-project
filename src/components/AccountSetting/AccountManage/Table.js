@@ -12,7 +12,6 @@ import { ReactComponent as ArrowLeft } from "../../../assets/icon/ArrowLeft.svg"
 import { ReactComponent as ArrowRight } from "../../../assets/icon/ArrowRight.svg";
 
 export default function TableAdmin({ elements, defaultColumns }) {
-
   const table = createTable().setRowType();
 
   // const defaultColumns = table.createColumns([
@@ -140,7 +139,7 @@ export default function TableAdmin({ elements, defaultColumns }) {
   //   }),
   // ]);
 
-  const [data, setData] = React.useState(() => [...elements]);
+  const [data] = React.useState(() => [...elements]);
 
   const [columns] = React.useState(() => [...defaultColumns]);
   const [pagination, setPagination] = React.useState({

@@ -1,36 +1,14 @@
-import { forwardRef } from 'react';
-import {
-  MultiSelect,
-  MultiSelectProps,
-  Box,
-  CloseButton,
-  SelectItemProps,
-  MultiSelectValueProps,
-} from '@mantine/core';
+import { forwardRef } from "react";
+import { MultiSelect, Box, CloseButton } from "@mantine/core";
 
-const countriesData = [
-  { label: 'United States', value: 'US' },
-  { label: 'Great Britain', value: 'GB' },
-  { label: 'Finland', value: 'FI' },
-  { label: 'France', value: 'FR' },
-  { label: 'Russia', value: 'RU' },
-];
-
-
-function Value({
-  value,
-  label,
-  onRemove,
-  classNames,
-  ...others
-}) {
+function Value({ value, label, onRemove, classNames, ...others }) {
   return (
     <div {...others}>
       <Box
         sx={() => ({
-          display: 'flex',
-          cursor: 'default',
-          alignItems: 'center',
+          display: "flex",
+          cursor: "default",
+          alignItems: "center",
           paddingLeft: 10,
           borderRadius: 4,
         })}
@@ -52,19 +30,19 @@ function Value({
 const Item = forwardRef(({ label, value, ...others }, ref) => {
   return (
     <div ref={ref} {...others}>
-      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Box sx={{ display: "flex", alignItems: "center" }}>
         <div>{label}</div>
       </Box>
     </div>
   );
 });
 
-export default function Demo({MultiSelectProps, hiddenTagData}) {
+export default function Demo({ MultiSelectProps, hiddenTagData }) {
   return (
     <MultiSelect
       data={hiddenTagData}
       limit={20}
-      classNames={{value: "rounded-full bg-blue-300 text-white"}}
+      classNames={{ value: "rounded-full bg-blue-300 text-white" }}
       valueComponent={Value}
       itemComponent={Item}
       searchable

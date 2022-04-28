@@ -9,9 +9,8 @@ export default function SchoolUpload() {
           htmlFor="file-upload"
           className="flex border rounded-full bg-red border-black text-center w-auto h-9 space-x-1"
         >
-          <a className="mx-1 self-center">
-            <Download />
-          </a>
+          <Download />
+
           <span className=" self-center pr-1">export csv.</span>
           <input
             id="file-upload"

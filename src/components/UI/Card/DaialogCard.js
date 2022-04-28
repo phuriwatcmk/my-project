@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Group, Button, TextInput, Text } from "@mantine/core";
+import { Modal, Group, Button } from "@mantine/core";
 
 export default function DialogCard({
   modalTitile,

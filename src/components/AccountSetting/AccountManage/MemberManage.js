@@ -4,7 +4,6 @@ import { createTable } from "@tanstack/react-table";
 
 import { ReactComponent as Trash } from "../../../assets/icon/trash.svg";
 import { ReactComponent as Pencil } from "../../../assets/icon/pencil.svg";
-import { ReactComponent as Link } from "../../../assets/icon/link.svg";
 
 import Select from "../../UI/Selector/Select";
 import DateRange from "../../UI/DatePickerRange/DatePickerRange";

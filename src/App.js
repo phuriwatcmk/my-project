@@ -19,7 +19,7 @@ import MemberManagePage from "./pages/MemberManage";
 import EditIdeaPage from "./pages/EditIdea";
 import SubschoolManagePage from "./pages/SubschoolManage";
 import AdminManagePage from "./pages/AccountSetting";
-import SchoolPage from './pages/SchoolPage';
+import SchoolPage from "./pages/SchoolPage";
 import IdeaPage from "./pages/IdeaPage";
 export default function App() {
   useEffect(() => {
@@ -41,10 +41,7 @@ export default function App() {
             element={<Login />}
           />
           <Route element={<Layout />}>
-            <Route
-              path="adminmanage"
-              element={<AdminManagePage />}
-            ></Route>
+            <Route path="adminmanage" element={<AdminManagePage />}></Route>
             <Route path="membermanage" element={<MemberManagePage />}></Route>
             <Route path="school" element={<SchoolManagePage />}>
               <Route path="schoolmanage" element={<SchoolPage />}></Route>
@@ -57,7 +54,7 @@ export default function App() {
               <Route path="ideadata" element={<IdeaDataPage />}></Route>
               <Route path="editidea" element={<EditIdeaPage />}></Route>
             </Route>
-            
+
             <Route path="logicmsg" element={<LogicMessagePage />}></Route>
           </Route>
           <Route element={<HomeLayout />}>

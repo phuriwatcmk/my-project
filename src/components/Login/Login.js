@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Card from "../UI/Card/Card";
 import { useNavigate } from "react-router-dom";
 
-import { PasswordInput, TextInput, Text, Button, Box } from "@mantine/core";
+import { PasswordInput, TextInput, Button, Box } from "@mantine/core";
 
 import styled from "styled-components";
 

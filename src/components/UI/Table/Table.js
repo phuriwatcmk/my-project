@@ -256,7 +256,7 @@ export default function TableAdmin({ elements, defaultColumns }) {
         <Pagination
           classNames={{
             item: "text-black border-0",
-            active: "!bg-primary-200",
+            active: "bg-secondaryPage",
             root: "!text-black",
           }}
           withControls={false}

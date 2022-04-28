@@ -1,13 +1,11 @@
 import React from "react";
-import { Box, Button } from "@mantine/core";
+import { Box } from "@mantine/core";
 import { createTable } from "@tanstack/react-table";
 
 import { ReactComponent as Trash } from "../../../assets/icon/trash.svg";
 import { ReactComponent as Pencil } from "../../../assets/icon/pencil.svg";
 
 import DialogCard from "../../UI/Card/DaialogCard";
-import AddLogicForm from "../AllLogic/AddLogicForm";
-import DelLogicForm from "../AllLogic/DelLogicForm";
 import Table from "../../UI/Table/Table";
 import UploadPic from "./UploadPic";
 
@@ -16,22 +14,22 @@ export default function Allpic() {
     {
       id: 1,
       logicName: "A",
-      picture: "picture A"
+      picture: "picture A",
     },
     {
       id: 2,
       logicName: "A",
-      picture: "picture A"
+      picture: "picture A",
     },
     {
       id: 3,
       logicName: "A",
-      picture: "picture A"
+      picture: "picture A",
     },
     {
       id: 4,
       logicName: "A",
-      picture: "picture A"
+      picture: "picture A",
     },
   ];
   const table = createTable().setRowType();

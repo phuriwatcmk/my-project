@@ -1,7 +1,6 @@
 import React from "react";
 import { Anchor, Breadcrumbs, Button } from "@mantine/core";
-import { ReactComponent as Trash } from "../../assets/icon/trash.svg";
-import HiddenTag from '../UI/HiddenTag/HiddenTag'
+import HiddenTag from "../UI/HiddenTag/HiddenTag";
 export default function EditIdea() {
   const data = [
     { value: "react", label: "React" },
@@ -67,7 +66,7 @@ export default function EditIdea() {
           <div className="mt-2 text-xl md:text-xl lg:text-2xl font-normal">
             Admin part
           </div>
-          <HiddenTag hiddenTagData={data}/>
+          <HiddenTag hiddenTagData={data} />
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Group, TextInput } from "@mantine/core";
+import { TextInput } from "@mantine/core";
 import { ReactComponent as SearchIco } from "../../../assets/icon/search.svg";
 
 export default function Search({ placeholder }) {
