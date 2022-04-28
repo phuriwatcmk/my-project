@@ -26,7 +26,6 @@ export default function DateRange({ label, placeholder }) {
         calendarHeaderLevel: {
           color: "black",
           fontSize: "large",
-          flex: "inline",
         },
         yearPickerControlActive: { color: "black" },
         monthPickerControlActive: { color: "black" },
