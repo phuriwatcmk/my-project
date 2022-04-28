@@ -17,13 +17,13 @@ export default function DatePickerWithLabel({ label, placeholder }) {
         inRange: "rounded-none",
         calendarHeaderLevel: "!font-2xl",
       }}
-      styles={{ cell: {} }}
       label={label}
       placeholder={placeholder}
       value={value}
+      firstDayOfWeek="sunday"
       onChange={setValue}
       amountOfMonths={2}
-      icon={<Calendar/>}
+      icon={<Calendar />}
     />
   );
 }
