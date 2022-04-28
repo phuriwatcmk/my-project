@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import IdeaOption from "./IdeaOption";
 import IdeaUpload from "./IdeaUpload";
 import { Box } from "@mantine/core";
@@ -12,6 +14,8 @@ import { Button } from "@mantine/core";
 import DialogCard from "../UI/Card/DaialogCard";
 import AddSchoolForm from "../AccountSetting/SchoolManage/SchoolForm/AddSchoolForm";
 import UserNameUI from "../../components/UI/User/UserName";
+import ReceivedUser from "../IdeaDatabase/ReceivedUser";
+import TagAdd from "./TagAdd";
 
 export default function IdeaDatabase() {
   const elements = [
@@ -278,44 +282,58 @@ export default function IdeaDatabase() {
     table.createDataColumn((row) => row.userTag, {
       id: "userTag",
       cell: (info) => (
-        <>
-          <div className="flex flex-nowrap max-w-xs overflow-x-auto scrollbarTable snap-x scroll-smooth">
+        <div className="flex">
+          <div className="mr-1 flex flex-nowrap my-custom-width overflow-x-auto scrollbarTable snap-x scroll-smooth">
             <div className="snap-center">
-              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-10 text-xs text-white bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
-
-            <DialogCard buttonIcon={<Add />} modalTitile="แก้ไขกลุ่มโรงเรียน">
-              <AddSchoolForm></AddSchoolForm>
-            </DialogCard>
+            <div className="snap-center">
+              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
+                {info.value}
+              </Button>
+            </div>
+            <div className="snap-center">
+              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
+                {info.value}
+              </Button>
+            </div>
           </div>
-        </>
+          <TagAdd></TagAdd>
+        </div>
       ),
       header: () => <span>User Tag</span>,
     }),
     table.createDataColumn((row) => row.hiddenTagByAdmin, {
       id: "hiddenTagByAdmin",
       cell: (info) => (
-        <>
-          <div className="flex flex-nowrap max-w-xs overflow-x-auto scrollbarTable">
+        <div className=" flex">
+          <div className="mr-1 flex flex-nowrap my-custom-width overflow-x-auto scrollbarTable">
             <div>
-              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-red-400 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-10 text-xs text-black bg-error hover:bg-error rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
-
-            <DialogCard buttonIcon={<Add />} modalTitile="แก้ไขกลุ่มโรงเรียน">
-              <AddSchoolForm></AddSchoolForm>
-            </DialogCard>
+            <div>
+              <Button className="mr-1 w-auto h-10 text-xs text-black  bg-error  hover:bg-error rounded-full focus:shadow-outline transition-colors duration-150">
+                {info.value}
+              </Button>
+            </div>
+            <div>
+              <Button className="mr-1 w-auto h-10 text-xs text-black  bg-error  hover:bg-error rounded-full focus:shadow-outline transition-colors duration-150">
+                {info.value}
+              </Button>
+            </div>
           </div>
-        </>
+          <TagAdd></TagAdd>
+        </div>
       ),
       header: () => <span>Hidden Tag by admin</span>,
     }),
     table.createDataColumn((row) => row.receivedUser, {
       id: "receivedUser",
-      cell: (info) => info.value,
+      cell: (info) => <ReceivedUser userdata={info.value}></ReceivedUser>,
       header: () => <span>Received (user)</span>,
     }),
     table.createDataColumn((row) => row.created, {
@@ -332,9 +350,15 @@ export default function IdeaDatabase() {
       id: "id",
       cell: (info) => (
         <>
-          <DialogCard buttonIcon={<Pencil />} modalTitile="แก้ไขกลุ่มโรงเรียน">
-            <AddSchoolForm value={info.value}></AddSchoolForm>
-          </DialogCard>
+          <Link to="/idea/editidea">
+            <Button
+              classNames={{
+                root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
+              }}
+            >
+              <Pencil />
+            </Button>
+          </Link>
         </>
       ),
       header: () => <span></span>,

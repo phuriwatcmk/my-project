@@ -68,8 +68,8 @@ export default function Demo({MultiSelectProps, hiddenTagData}) {
       valueComponent={Value}
       itemComponent={Item}
       searchable
-      placeholder="Pick countries"
-      label="Which countries you visited last year?"
+      rightSection={<></>}
+      placeholder="เลือก Hidden Tag"
       {...MultiSelectProps}
     />
   );

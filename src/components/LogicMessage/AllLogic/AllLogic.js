@@ -9,6 +9,7 @@ import DialogCard from "../../UI/Card/DaialogCard";
 import AddLogicForm from "./AddLogicForm";
 import DelLogicForm from "./DelLogicForm";
 import Table from "../../UI/Table/Table";
+import LinkUI from "../../UI/Link/LinkUI";
 export default function AllLogic() {
   const elements = [
     {
@@ -46,7 +47,7 @@ export default function AllLogic() {
     }),
     table.createDataColumn((row) => row.linkPaperform, {
       id: "linkPaperform",
-      cell: (info) => info.value,
+      cell: (info) => <LinkUI href={info.value} name={info.value} />,
       header: () => <span>Link Paperform</span>,
     }),
     table.createDataColumn((row) => row.hiddenTag, {
@@ -55,12 +56,12 @@ export default function AllLogic() {
         <>
           <div className="flex flex-nowrap max-w-xs">
             <div className="snap-center">
-              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
             <div className="snap-center">
-              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-blue-800 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-10 text-xs text-white  bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>

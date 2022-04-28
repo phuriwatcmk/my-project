@@ -33,7 +33,7 @@ export default function DialogCard({
         <Group position="right" mt="xl">
           <Button
             classNames={{
-              root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
+              root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black",
               label: "",
             }}
             type="button"
@@ -42,7 +42,7 @@ export default function DialogCard({
           </Button>
           <Button
             classNames={{
-              root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
+              root: "z-40 border rounded-full bg-primary  hover:bg-primary text-black",
               label: "",
             }}
             type="button"
@@ -55,7 +55,7 @@ export default function DialogCard({
       <Group position="start">
         <Button
           classNames={{
-            root: "z-40 border rounded-full bg-transparent  hover:bg-transparent border-black text-black border-blue",
+            root: "z-40 bg-primary hover:bg-primary rounded-full text-black",
             label: "",
             icon: "mr-0",
           }}

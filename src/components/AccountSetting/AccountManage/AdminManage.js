@@ -4,6 +4,7 @@ import { createTable } from "@tanstack/react-table";
 
 import { ReactComponent as Trash } from "../../../assets/icon/trash.svg";
 import { ReactComponent as Pencil } from "../../../assets/icon/pencil.svg";
+import { ReactComponent as Plus } from "../../../assets/icon/Plus.svg";
 
 import DialogCard from "../../UI/Card/DaialogCard";
 import AddAdminForm from "./AdminUI/FormUI/AddAdminForm";
@@ -49,20 +50,20 @@ export default function AccountnManage() {
     table.createDataColumn((row) => row.id, {
       id: "id",
       cell: (info) => (
-          <div className="flex justify-end space-x-2">
-            <DialogCard
-              buttonIcon={<Pencil />}
-              modalTitile="แก้ไขบัญชีผู้ดูแลระบบ"
-            >
-              <AddAdminForm value={info.value}></AddAdminForm>
-            </DialogCard>
-            <DialogCard
-              buttonIcon={<Trash />}
-              modalTitile="แก้ไขบัญชีผู้ดูแลระบบ"
-            >
-              <DelAdminForm value={info.value}></DelAdminForm>
-            </DialogCard>
-          </div>
+        <div className="flex justify-end space-x-2">
+          <DialogCard
+            buttonIcon={<Pencil />}
+            modalTitile="แก้ไขบัญชีผู้ดูแลระบบ"
+          >
+            <AddAdminForm value={info.value}></AddAdminForm>
+          </DialogCard>
+          <DialogCard
+            buttonIcon={<Trash />}
+            modalTitile="แก้ไขบัญชีผู้ดูแลระบบ"
+          >
+            <DelAdminForm value={info.value}></DelAdminForm>
+          </DialogCard>
+        </div>
       ),
       header: () => <span></span>,
     }),
@@ -76,8 +77,9 @@ export default function AccountnManage() {
       {/* <AdminTagSearch></AdminTagSearch> */}
       <div className="mt-8 ">
         <DialogCard
-          buttonTitle="+ เพิ่มบัญชีผู้ดูแลระบบ"
+          buttonTitle="เพิ่มบัญชีผู้ดูแลระบบ"
           modalTitile="เพิ่มบัญชีผู้ดูแลระบบ"
+          buttonIcon={<Plus />}
         >
           <AddAdminForm></AddAdminForm>
         </DialogCard>

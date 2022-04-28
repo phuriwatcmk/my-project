@@ -31,3 +31,7 @@ body {
     background: #34353580;
   }
 }
+
+.my-custom-width {
+  max-width: 12rem;
+}

@@ -4,15 +4,15 @@ import { ReactComponent as Download } from "../../../assets/icon/download.svg";
 export default function SchoolUpload() {
   return (
     <Fragment>
-      <div className="">
+      <div className="flex items-center">
         <label
           htmlFor="file-upload"
-          className="inline-flex border rounded-full bg-red border-black p-2"
+          className="flex border rounded-full bg-red border-black text-center w-auto h-9 space-x-1"
         >
-          <a className="mr-1 self-center">
-            <Download/>
+          <a className="mx-1 self-center">
+            <Download />
           </a>
-          <span>export csv.</span>
+          <span className=" self-center pr-1">export csv.</span>
           <input
             id="file-upload"
             name="file-upload"

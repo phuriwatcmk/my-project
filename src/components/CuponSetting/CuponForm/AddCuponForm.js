@@ -12,8 +12,8 @@ export default function AddCuponForm() {
       <Select
         className="mt-1"
         label="เลือกวิธีลดราคา"
-        placeholder="ส่วนลด (%)"
-        data={[]}
+        placeholder="เลือกวิธีลดราคา"
+        data={["ส่วนลด (%)", "ส่วนลด (บาท)"]}
       ></Select>
       <TextInput className="mt-1" label="" placeholder="ใส่เลข" />
       <DatePicker

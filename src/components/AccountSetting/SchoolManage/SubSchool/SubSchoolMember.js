@@ -9,9 +9,10 @@ import Select from "../../../UI/Selector/Select";
 import Search from "../../../UI/Search/Search";
 import DialogCard from "../../../UI/Card/DaialogCard";
 import Table from "../../../UI/Table/Table";
-import UserIdUI from '../../../UI/User/UserId'
+import UserIdUI from "../../../UI/User/UserId";
 import AddSubSchoolForm from "../../SchoolManage/SubSchool/SubSchoolForm/AddSubSchoolForm";
 import DelSubSchoolForm from "../../SchoolManage/SubSchool/SubSchoolForm/DelSubSchoolForm";
+import LinkUI from "../../../UI/Link/LinkUI";
 
 export default function SubSchoolMember() {
   const elements = [
@@ -23,7 +24,7 @@ export default function SubSchoolMember() {
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
-      userJob: "สังกัด",
+      userJob: "ครู",
       userSchool: "สังกัด",
       provinces: "จังหวัด",
       userSubject: "ไทย",
@@ -37,7 +38,7 @@ export default function SubSchoolMember() {
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
-      userJob: "สังกัด",
+      userJob: "ครู",
       userSchool: "สังกัด",
       provinces: "จังหวัด",
       userSubject: "ไทย",
@@ -51,7 +52,7 @@ export default function SubSchoolMember() {
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
-      userJob: "สังกัด",
+      userJob: "ครู",
       userSchool: "สังกัด",
       provinces: "จังหวัด",
       userSubject: "ไทย",
@@ -65,7 +66,7 @@ export default function SubSchoolMember() {
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
-      userJob: "สังกัด",
+      userJob: "ครู",
       userSchool: "สังกัด",
       provinces: "จังหวัด",
       userSubject: "ไทย",
@@ -92,7 +93,7 @@ export default function SubSchoolMember() {
     }),
     table.createDataColumn((row) => row.userid, {
       id: "userid",
-      cell: (info) => <UserIdUI userId={info.value}/>,
+      cell: (info) => <UserIdUI userId={info.value} />,
       header: () => <span>userid</span>,
     }),
     table.createDataColumn((row) => row.userName, {
@@ -102,7 +103,7 @@ export default function SubSchoolMember() {
     }),
     table.createDataColumn((row) => row.userGoal, {
       id: "userGoal",
-      cell: (info) => info.value,
+      cell: (info) => <LinkUI href={info.value} />,
       header: () => <span>หน้าเป้าหมาย</span>,
     }),
     table.createDataColumn((row) => row.userJob, {
@@ -126,12 +127,12 @@ export default function SubSchoolMember() {
         <>
           <div className="flex flex-nowrap max-w-xs">
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-red-400 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-red-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary  hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
@@ -146,12 +147,12 @@ export default function SubSchoolMember() {
         <>
           <div className="flex flex-nowrap max-w-xs">
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-400 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary  hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>

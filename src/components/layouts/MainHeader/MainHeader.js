@@ -13,6 +13,7 @@ function Nav(props) {
     { title: "Idea", href: "/idea/ideadata" },
     { title: "EditIdea", href: "/idea/editidea" },
     { title: "AdminManage", href: "/adminmanage" },
+    { title: "MemberManage", href: "/membermanage" },
     { title: "SchoolManage", href: "/school/schoolmanage" },
     { title: "SubSchoolManage", href: "/school/subschool" },
     { title: "CuponSetting", href: "/cuponsetting" },

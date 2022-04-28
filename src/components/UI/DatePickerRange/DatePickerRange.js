@@ -22,6 +22,7 @@ export default function DateRange({ label, placeholder }) {
       placeholder={placeholder}
       value={value}
       onChange={setValue}
+      initiallyOpened={false}
       amountOfMonths={2}
       icon={<Calendar />}
     />

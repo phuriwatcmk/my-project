@@ -4,6 +4,7 @@ import { createTable } from "@tanstack/react-table";
 
 import { ReactComponent as Trash } from "../../../assets/icon/trash.svg";
 import { ReactComponent as Pencil } from "../../../assets/icon/pencil.svg";
+import { ReactComponent as Link } from "../../../assets/icon/link.svg";
 
 import Select from "../../UI/Selector/Select";
 import DateRange from "../../UI/DatePickerRange/DatePickerRange";
@@ -12,8 +13,9 @@ import DialogCard from "../../UI/Card/DaialogCard";
 import SchoolUpload from "./SchoolUpload";
 import AddMemberForm from "./MemberForm/AddMemberForm";
 import DelMemberForm from "./MemberForm/DelMemberForm";
-import UserIdUI from '../../UI/User/UserId'
+import UserIdUI from "../../UI/User/UserId";
 import Table from "../../UI/Table/Table";
+import LinkUI from "../../UI/Link/LinkUI";
 
 export default function MemberManage() {
   const elements = [
@@ -98,12 +100,14 @@ export default function MemberManage() {
     }),
     table.createDataColumn((row) => row.position, {
       id: "position",
-      cell: (info) => <div className="font-thin text-gray-400">{info.value}</div>,
+      cell: (info) => (
+        <div className="font-thin text-gray-400">{info.value}</div>
+      ),
       header: () => <span>ตำแหน่ง</span>,
     }),
     table.createDataColumn((row) => row.userid, {
       id: "userid",
-      cell: (info) => <UserIdUI userId={info.value}/>,
+      cell: (info) => <UserIdUI userId={info.value} />,
       header: () => <span>userid</span>,
     }),
     table.createDataColumn((row) => row.userName, {
@@ -113,7 +117,7 @@ export default function MemberManage() {
     }),
     table.createDataColumn((row) => row.userGoal, {
       id: "userGoal",
-      cell: (info) => info.value,
+      cell: (info) => <LinkUI href={info.value} />,
       header: () => <span>หน้าเป้าหมาย</span>,
     }),
     table.createDataColumn((row) => row.userJob, {
@@ -137,12 +141,12 @@ export default function MemberManage() {
         <>
           <div className="flex flex-nowrap max-w-xs">
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-red-400 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-red-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary  hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
@@ -157,12 +161,12 @@ export default function MemberManage() {
         <>
           <div className="flex flex-nowrap max-w-xs">
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-400 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary  hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
@@ -192,7 +196,7 @@ export default function MemberManage() {
       <div className="text-2xl md:text-xl lg:text-4xl font-bold tracking-wide">
         จัดการบัญชี Membership
       </div>
-      <div className="mt-8 inline-flex">
+      <div className="mt-8 inline-flex space-x-4">
         {/* Addmembership dialog */}
         <DialogCard
           buttonTitle="+ เพิ่ม Membership"
@@ -203,21 +207,25 @@ export default function MemberManage() {
 
         <SchoolUpload></SchoolUpload>
       </div>
-      <div className="mt-8">
-        <div className="">
-          <div className="">
-            <DateRange
-              label=""
-              placeholder="เลือกวันที่เริ่ม - หมดอายุ"
-            ></DateRange>
-          </div>
+      <div className="space-y-4">
+        <div className="mt-4">
+          <DateRange
+            label=""
+            placeholder="เลือกวันที่เริ่ม - หมดอายุ"
+          ></DateRange>
         </div>
-        <div className="mt-8 flex flex-row justify-center gap-8">
+        <div className="flex flex-row justify-center space-x-8">
           <div className="basis-1/6">
-            <Select placeholder="แพ็คเกจ" data={[]}></Select>
+            <Select
+              placeholder="แพ็คเกจ"
+              data={["Kru Solo", "Kru Plus", "Family Plus", "School"]}
+            ></Select>
           </div>
           <div className="basis-1/6">
-            <Select placeholder="ตำแหน่ง" data={[]}></Select>
+            <Select
+              placeholder="ตำแหน่ง"
+              data={["ผอ./ฝ่ายวิชาการ", "School Membership", "Membership"]}
+            ></Select>
           </div>
           <div className="basis-1/6">
             <Select placeholder="อาชีพ" data={[]}></Select>
@@ -230,7 +238,7 @@ export default function MemberManage() {
           </div>
           <div className="basis-1/3"></div>
         </div>
-        <div className="mt-8 flex flex-row justify-center gap-8">
+        <div className="flex flex-row justify-center space-x-8">
           <div className="basis-1/3">
             <Select
               placeholder="พิมพ์แท็ก ระดับชั้น หรือ วิชาที่สอน"

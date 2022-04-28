@@ -1,5 +1,5 @@
 import React from "react";
-import { Anchor, Breadcrumbs, Box, Button} from "@mantine/core";
+import { Anchor, Breadcrumbs, Box, Button } from "@mantine/core";
 import { createTable } from "@tanstack/react-table";
 
 import { ReactComponent as Trash } from "../../../../assets/icon/trash.svg";
@@ -7,12 +7,12 @@ import { ReactComponent as Pencil } from "../../../../assets/icon/pencil.svg";
 
 import Table from "../../../UI/Table/Table";
 import DialogCard from "../../../UI/Card/DaialogCard";
-import UserIdUI from '../../../UI/User/UserId'
+import UserIdUI from "../../../UI/User/UserId";
 import SchoolUpload from "../../AccountManage/SchoolUpload";
 import AddSubSchoolForm from "../../SchoolManage/SubSchool/SubSchoolForm/AddSubSchoolForm";
 import DelSubSchoolForm from "../../SchoolManage/SubSchool/SubSchoolForm/DelSubSchoolForm";
 import SubSchoolMember from "./SubSchoolMember";
-
+import LinkUI from "../../../UI/Link/LinkUI";
 
 export default function Schoolmanage() {
   const items = [
@@ -33,7 +33,7 @@ export default function Schoolmanage() {
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
-      userJob: "สังกัด",
+      userJob: "ครู",
       userSchool: "สังกัด",
       provinces: "จังหวัด",
       userSubject: "ไทย",
@@ -47,7 +47,7 @@ export default function Schoolmanage() {
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
-      userJob: "สังกัด",
+      userJob: "ครู",
       userSchool: "สังกัด",
       provinces: "จังหวัด",
       userSubject: "ไทย",
@@ -61,7 +61,7 @@ export default function Schoolmanage() {
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
-      userJob: "สังกัด",
+      userJob: "ครู",
       userSchool: "สังกัด",
       provinces: "จังหวัด",
       userSubject: "ไทย",
@@ -75,7 +75,7 @@ export default function Schoolmanage() {
       userid: "021536",
       userName: "ชื่อ-นามสกุลชื่อ",
       userGoal: "www.google.com",
-      userJob: "สังกัด",
+      userJob: "ครู",
       userSchool: "สังกัด",
       provinces: "จังหวัด",
       userSubject: "ไทย",
@@ -102,7 +102,7 @@ export default function Schoolmanage() {
     }),
     table.createDataColumn((row) => row.userid, {
       id: "userid",
-      cell: (info) => <UserIdUI userId={info.value}/>,
+      cell: (info) => <UserIdUI userId={info.value} />,
       header: () => <span>userid</span>,
     }),
     table.createDataColumn((row) => row.userName, {
@@ -112,7 +112,7 @@ export default function Schoolmanage() {
     }),
     table.createDataColumn((row) => row.userGoal, {
       id: "userGoal",
-      cell: (info) => info.value,
+      cell: (info) => <LinkUI href={info.value} />,
       header: () => <span>หน้าเป้าหมาย</span>,
     }),
     table.createDataColumn((row) => row.userJob, {
@@ -136,12 +136,12 @@ export default function Schoolmanage() {
         <>
           <div className="flex flex-nowrap max-w-xs">
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-red-400 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-red-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary  hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
@@ -156,12 +156,12 @@ export default function Schoolmanage() {
         <>
           <div className="flex flex-nowrap max-w-xs">
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-400 hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
             <div>
-              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-blue-400  hover:bg-indigo-100 rounded-full focus:shadow-outline transition-colors duration-150">
+              <Button className="mr-1 w-auto h-8 text-xs text-white  bg-secondary  hover:bg-secondary rounded-full focus:shadow-outline transition-colors duration-150">
                 {info.value}
               </Button>
             </div>
@@ -178,7 +178,7 @@ export default function Schoolmanage() {
             <AddSubSchoolForm></AddSubSchoolForm>
           </DialogCard>
           <DialogCard buttonIcon={<Trash />} modalTitile="ลบ Membership">
-          <DelSubSchoolForm></DelSubSchoolForm>
+            <DelSubSchoolForm></DelSubSchoolForm>
           </DialogCard>
         </div>
       ),
@@ -188,9 +188,9 @@ export default function Schoolmanage() {
 
   return (
     <div>
-        <div className="mb-2">
-          <Breadcrumbs separator=">">{items}</Breadcrumbs>
-        </div>
+      <div className="mb-2">
+        <Breadcrumbs separator=">">{items}</Breadcrumbs>
+      </div>
       <div className="text-2xl md:text-xl lg:text-4xl font-bold tracking-wide">
         โรงเรียน A
       </div>
@@ -198,18 +198,16 @@ export default function Schoolmanage() {
         สังกัด : xxxxx จังหวัด : xxxxx คูปอง : xxxxxxxxxxxxxxx วันเริ่ม -
         วันหมดอายุ : 01/01/01 - 01/01/01
       </p>
-      <div className="mt-8 inline-flex">
+      <div className="mt-8 inline-flex space-x-6">
         <DialogCard
           buttonTitle="+ เพิ่มบัญชีในกลุ่มนี้"
           modalTitile="เพิ่มบัญชีในกลุ่มนี้"
         >
           <AddSubSchoolForm></AddSubSchoolForm>
         </DialogCard>
-        <div className="mx-8">
-          <DialogCard buttonTitle="ดูแดชบอร์ด" modalTitile="ดูแดชบอร์ด">
-            <form></form>
-          </DialogCard>
-        </div>
+        <DialogCard buttonTitle="ดูแดชบอร์ด" modalTitile="ดูแดชบอร์ด">
+          <form></form>
+        </DialogCard>
         <SchoolUpload></SchoolUpload>
       </div>
       <div className="mt-8 text-2xl">ผอ. / ฝ่ายวิชาการ</div>
@@ -218,6 +216,8 @@ export default function Schoolmanage() {
       <Box className="mt-8">
         <Table elements={elements} defaultColumns={defaultColumns} />
       </Box>
+
+      {/* All Member of school */}
       <SubSchoolMember></SubSchoolMember>
     </div>
   );

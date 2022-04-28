@@ -7,7 +7,7 @@ export default function UserId({ userId }) {
       <div className="absolute -ml-3 self-center">
         <Usericon />
       </div>
-      <div className="w-20 h-7 border rounded-full text-black text-center ">
+      <div className="pt-0.5 px-5 max-w-fit h-7 border rounded-full text-black text-center">
         {userId}
       </div>
     </div>
